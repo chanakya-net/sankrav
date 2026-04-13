@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sankrav AI Solutions | Coming Soon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <main class="container">
+        <header class="header">
+            <div class="logo">SANKRAV<span>AI</span></div>
+        </header>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="headline">Next-Generation <br><span class="accent">AI Business Solutions</span></h1>
+                <p class="subtext">
+                    Empowering your enterprise with intelligent automation. We are building a comprehensive suite of AI-integrated software for <strong>Billing</strong>, <strong>Inventory Management</strong>, and <strong>School Administration</strong>.
+                </p>
+                
+                <div class="feature-tags">
+                    <span class="tag">Smart Billing</span>
+                    <span class="tag">AI Inventory</span>
+                    <span class="tag">EduTech AI</span>
+                </div>
+
+                <div class="cta-section" id="cta-container">
+                    <p class="cta-label">Get notified when we launch:</p>
+                    <form class="notify-form" id="notify-form">
+                        <input type="email" placeholder="Enter your email address" required aria-label="Email address">
+                        <button type="submit">Notify Me</button>
+                    </form>
+                    <p class="success-message" id="success-message">Great! We'll keep you updated.</p>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="image-wrapper">
+                    <img src="image-3.png" alt="Sankrav AI Software Visual" class="floating-image">
+                    <div class="glow-effect"></div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2026 Sankrav AI Solutions. All rights reserved.</p>
+        </footer >
+    </main>
+
+    <script>
+        document.getElementById('notify-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = this;
+            const successMsg = document.getElementById('success-message');
+            
+            form.style.opacity = '0';
+            setTimeout(() => {
+                form.style.display = 'none';
+                successMsg.style.display = 'block';
+                setTimeout(() => {
+                    successMsg.style.opacity = '1';
+                    successMsg.style.transform = 'translateY(0)';
+                }, 10);
+            }, 300);
+        });
+    </script>
+</body>
+</html>
